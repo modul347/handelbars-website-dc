@@ -1,0 +1,11 @@
+# Build the image
+
+docker build -t hbars  .     
+
+# Run the image
+
+docker run -p 3000:3000 hbars
+
+# Run the image with a volume
+
+docker run -p 3000:3000 -v $(pwd):/usr/src/app  hbars
